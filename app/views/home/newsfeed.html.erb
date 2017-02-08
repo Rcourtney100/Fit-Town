@@ -1,0 +1,20 @@
+
+<h2 class= "newsfeed"><%= fa_icon "newspaper-o" %>NewsFeed<h2>
+
+<div class="row">
+  <div id="newsfeed">
+    <br>
+    <div id="activities">
+    	<% @activities.each do |activity| %>
+	<% if activity.event_created %>
+		<% event = Event.find(activity.event_created) %>
+		<p><%= event.user.fname %> created a new event <%= link_to event.name, event %></p>
+	<% elsif activity.comment_created %>
+		<% comment = Comment.find(activity.comment_created) %>
+		<p><%= comment.user.fname %> commented on <%= link_to comment.event.name, comment.event %></p>
+
+	<% end %>
+<% end %>
+</div>
+  
+  </div>

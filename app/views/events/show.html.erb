@@ -1,0 +1,36 @@
+<div class = "event-feed">
+<div>Event: <%= @event.name %> 
+<br>
+	Description: <%= @event.description %>
+	<br>
+	Date: <%= @event.time %>
+	<br>
+	Location: <%=@event.location %>
+</div>
+
+<div class = "comment-form">
+
+<%= form_for @comment, url: comments_path do |f| %>
+
+<%= f.label :Make_a_Comment %>
+<%= f.text_field :content %>
+
+<%= f.hidden_field :user_id, value: current_user.id %>
+
+<%= f.hidden_field :event_id, value: @event.id %>
+
+<%= f.submit :submit %>
+
+<% end %>
+
+<br>
+
+<div> <% @event.comments.each do |comment| %> </div>
+
+<br>
+
+<div>Comments: <%= comment.content %> </div>
+
+<% end %>
+</div>
+

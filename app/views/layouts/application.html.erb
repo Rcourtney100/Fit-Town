@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fit-Town</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://use.fontawesome.com/ff6662730f.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Black" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans|Lora" rel="stylesheet">
+  </head>
+<body>
+
+
+
+        <div class="nav nav-bar main-nav navbar-fixed-top">
+          <div class="nav-brand">
+            <a class="navbar-brand" href="/">Fit-Town</a>
+          </div>
+
+
+        
+
+        
+
+          <% if current_user %>
+
+          <ul class="nav navbar-nav navbar-left navigation">
+            <li><a href='/'>Home</a></li>
+            <li><a href='/home/about'>About Us</a></li>
+            <li><a href='/home/newsfeed'>NewsFeed</a></li>
+
+
+          </ul>
+         
+          <ul class="nav navbar-nav navbar-right navigation">
+            <li><%= link_to "Your Profile", user_path(current_user) %></li>
+            <li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
+
+            </ul>
+
+          <div class="search-container">
+          <div class="search-form">
+
+            <%= form_tag( :method => "get", id: "search-form") do %>
+            <%= text_field_tag :search, params[:search], placeholder: "Search Users" %>
+            <%= submit_tag "Search", class: 'btn btn-primary' %>
+          </div>
+        </div>
+
+
+          <% end %>
+          <% end %>
+
+
+            <% if !current_user %>
+            
+            <ul class="nav navbar-nav navbar-left navigation">
+              <li><a href='/'>Home</a></li>
+              <li><a href='/home/about'>About Us</a></li>
+            </ul>
+
+
+            <ul class="nav navbar-nav navbar-right navigation">
+              <li><a href=<%= '/users/sign_up'%>>Sign Up</a></li>
+              <li><a href=<%= '/users/sign_in' %>>Sign In</a></li>
+            </ul>
+
+          <% end %>  
+
+  
+
+        </div>
+     <div class ="main-content-wrapper">   
+  <%= yield %>
+  </div>
+
+<footer>
+    <ul class="nav navbar-nav">
+                  <li><i class="fa fa-facebook"></i></li>
+                  <li><i class="fa fa-twitter"></i></li>
+                  <li><i class="fa fa-instagram"></i></li>
+                  <li><i class="fa fa-snapchat"></i></li>
+                </ul>  
+</footer>
+
+  </body>
+</html>

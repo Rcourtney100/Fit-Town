@@ -1,0 +1,182 @@
+/* set `#slideshow` parent background color */
+
+.color-wrapper{
+	background-color: #C0C0C0;
+}
+
+
+.my-events{
+	border: 1px solid #000;
+	text-align: center;
+
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin: 0 0 100px; /* bottom = footer height */
+}
+
+
+footer{
+	background-image: url("rednavbar.jpg");
+	position: absolute;
+	width: 100%;
+	left: 0;
+	bottom: 0;
+	height: 40px;
+
+
+	.navbar-nav{
+		li{
+			margin-top: 2px;
+			margin-left: 15px;
+			color: white;
+		}
+	}
+}
+
+
+
+.profile-pic{
+	margin-left: 100px;
+}
+
+.event-form{
+	margin-left: 40%;
+}
+
+.devise-forms{
+	margin-left: 40%;
+	margin-right: 40%;
+	bottom: 20px;
+}
+
+.profile-welcome{
+	padding-top: 100px;
+	margin-left: 200px;
+}
+
+.slideshow{
+  height: 750px;		
+  background: #000;
+  display: block;
+  width:100%;
+  margin-top: 1%;
+}
+
+#slideshow{
+  width: 100%;
+  height: 100%;
+  display: block;
+  opacity: 0.0;
+  background-color: #000;
+
+ background-image: url("http://greatist.com/sites/default/files/running.jpg"), url("http://blog.spectafy.com/wp-content/uploads/2014/06/basketball_short.jpg"), url("");
+ background-size: cover;
+}
+
+.another{
+  position: relative;
+  top: 0;
+}
+
+
+
+
+
+
+	.about-us-header {
+	padding-top: 80px;
+	text-align: center;
+	text-decoration: underline;
+	font-family:'Droid Sans', sans-serif;
+	text-shadow: 2px 2px 2px black;
+
+
+	.about-us {
+	text-align: center;
+	font-family: 'Lora', serif;
+	margin-right: 100px;
+	margin-left: 100px;
+	top: 50%;
+	border: 1px solid #000;
+	text-shadow: 2px 2px 2px black;
+
+}
+}
+
+
+.navigation {
+
+	padding-right: 10px;
+
+}
+
+.navbar-right{
+	float: right;
+	fixed: top;
+}
+
+li {
+			text-color: white;
+			display: inline-block;
+			padding-right: 15px;
+			list-style-type: none;
+		}
+a:hover {
+			background-color: black;
+		}
+	
+.event-feed{
+	text-align: center;
+	padding-top: 80px;
+}
+
+.comment-form{
+	text-align: center;
+}
+
+.navbar-brand {
+	font-size: 60px;
+	font-family: 'Archivo Black', sans-serif;
+	color: white;
+}
+
+.main-nav {
+	background-image: url("rednavbar.jpg"); 
+}
+
+.main-content-wrapper{
+	margin-top: 50px;
+}
+
+.main-container {
+	background-color: white;
+}
+
+#newsfeed {
+	text-align: center;
+	border: 1px solid #000;
+	text: 20px;
+	margin-left: 220px;
+	margin-right: 200px;
+	padding-bottom: 5%
+}
+
+.newsfeed {
+	padding-top: 100px;
+	margin-left: 40%;
+
+
+}
+
+#activities{
+	
+	padding-right: 5px;
+	padding-left: 5px;
+}
+
