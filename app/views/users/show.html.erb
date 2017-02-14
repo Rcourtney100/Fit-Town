@@ -25,7 +25,7 @@
         <ul class="nav nav-pills nav-stacked">
        
           <li><%= link_to 'Following', users_follow_path(@user) %></li>
-          <li><%= link_to 'Followers'%></li>
+          <li><%= link_to 'Followers', users_followers_path(@user)%></li>
           <li><%= link_to 'Create a New Event', new_event_path %></li>
           <li><%= link_to 'My Events', events_my_events_path %></li>
           <li><%= link_to 'Edit your Account', edit_user_registration_path %></li>

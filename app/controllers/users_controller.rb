@@ -11,6 +11,7 @@ class UsersController < ApplicationController
   end
   def follow
   	Follower.create(follower: current_user.id, following: params[:user_id])
+    @following = @user.following
   end
 
   def already_following

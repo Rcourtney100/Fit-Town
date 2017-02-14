@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
   get 'events/my_events'
 
+  get 'users/followers/:user_id', to: 'users#followers', as: 'users_followers'
+
 
   resources :events, :comments
 
